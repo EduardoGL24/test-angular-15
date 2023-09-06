@@ -1,0 +1,15 @@
+<section class="w-100 pt-4 pb-4">
+  <div class="modal-content-container">
+    <h1 mat-dialog-title class="text-center pt-2 mb-0">Escribe tu nombre</h1>
+    <div mat-dialog-content class="text-center pt-4">
+      <mat-form-field appearance="outline" class="w-75">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="name" type="text" placeholder="Nombre" />
+      </mat-form-field>
+    </div>
+    <div class="ps-3 pe-3 d-flex flex-row-reverse buttons-container">
+      <button mat-button cdkFocusInitial [mat-dialog-close]="name" class="color-bg-primary" [disabled]="name === ''">Guardar</button>
+      <button mat-button matDialogClose class="cancel-button me-3">Cancelar</button>
+    </div>
+  </div>
+</section>

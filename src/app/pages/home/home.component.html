@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="main-container">
+  <section class="home-text-container">
+    <h1 class="mb-5">Bienvenidos a mi portal</h1>
+    <h2 class="mb-5">Eduardo García López</h2>
+    <h3 class="mb-5" *ngIf="name != ''">El nombre ingresado es: {{name | cambioLetras}}</h3>
+    <button class="w-50" mat-flat-button (click)="openModal()">ESCRIBE TU NOMBRE</button>
+  </section>
+</div>

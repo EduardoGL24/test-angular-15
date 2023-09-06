@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiLoginService } from 'src/app/services/api-login.service';
+import { ApiLoginService } from 'src/app/services/api/api-login.service';
 
 @Component({
   selector: 'app-login',
