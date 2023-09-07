@@ -33,8 +33,8 @@ export class LoginComponent {
 			username: this.loginForm.get('username')?.value,
 			password: this.loginForm.get('password')?.value,
 		};
-		this.router.navigate(['/home']);
 		this.loginService.login(body).subscribe(resp => {
+			this.router.navigate(['/home']);
 			console.log(resp)
 		}, (error) => {
 			console.log(error);

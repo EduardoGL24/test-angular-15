@@ -8,11 +8,11 @@ export class CambioLetrasPipe implements PipeTransform {
   transform(value: string): string {
     if (!value) return value;
 
-    value = value.replace(/a/g, '4');
-    value = value.replace(/e/g, '3');
-    value = value.replace(/i/g, '1');
-    value = value.replace(/o/g, '0');
-    value = value.replace(/u/g, '9');
+    value = value.replace(/a/gi, '4');
+    value = value.replace(/e/gi, '3');
+    value = value.replace(/i/gi, '1');
+    value = value.replace(/o/gi, '0');
+    value = value.replace(/u/gi, '9');
 
     return value;
   }

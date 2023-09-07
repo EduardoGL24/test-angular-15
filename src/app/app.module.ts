@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './components/modal/modal.component';
 import { CambioLetrasPipe } from './pipes/cambio-letras.pipe';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CambioLetrasPipe } from './pipes/cambio-letras.pipe';
     LoginComponent,
     HomeComponent,
     ModalComponent,
-    CambioLetrasPipe
+    CambioLetrasPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
