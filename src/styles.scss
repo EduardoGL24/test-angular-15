@@ -12,6 +12,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 button{
-  color: #FFF !important;
   border-radius: 15px !important;
+}
+
+.page-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 90px;
+  .page-title{
+   color: #FFF;
+   font-weight: 500;
+   font-size: 35px;
+   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  }
 }

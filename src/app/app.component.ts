@@ -13,7 +13,7 @@ export class AppComponent {
 
   isLoginPage(): boolean {
     const currentUrl = this.router.url;
-    return currentUrl === '/';
+    return currentUrl === '/login';
   }
 
 }
