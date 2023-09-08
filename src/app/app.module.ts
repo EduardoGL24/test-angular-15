@@ -16,6 +16,7 @@ import { CambioLetrasPipe } from './pipes/cambio-letras.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ConversionsComponent } from './pages/conversions/conversions.component';
 import { CalculateDateComponent } from './pages/calculate-date/calculate-date.component';
+import { FormComponent } from './pages/form/form.component';
 
 registerLocaleData(localeEs, 'es');
 
@@ -28,7 +29,8 @@ registerLocaleData(localeEs, 'es');
     CambioLetrasPipe,
     NavbarComponent,
     ConversionsComponent,
-    CalculateDateComponent
+    CalculateDateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

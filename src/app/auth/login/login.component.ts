@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiLoginService } from 'src/app/services/api/api-login.service';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ export class LoginComponent {
 	constructor(
 		private formBuilder: FormBuilder,
 		private router: Router,
-		private loginService: ApiLoginService
+		private apiService: ApiService
 	) {}
 
 	ngOnInit(): void {
@@ -33,7 +33,7 @@ export class LoginComponent {
 			username: this.loginForm.get('username')?.value,
 			password: this.loginForm.get('password')?.value,
 		};
-		this.loginService.login(body).subscribe(resp => {
+		this.apiService.login(body).subscribe(resp => {
 			this.router.navigate(['/home']);
 			console.log(resp)
 		}, (error) => {
