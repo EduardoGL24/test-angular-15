@@ -35,9 +35,9 @@ export class LoginComponent {
 		};
 		this.apiService.login(body).subscribe(resp => {
 			this.router.navigate(['/home']);
-			console.log(resp)
+			sessionStorage.setItem('isAuthenticated', 'true');
 		}, (error) => {
-			console.log(error);
+			sessionStorage.setItem('isAuthenticated', 'false');
 		})
 	}
 }

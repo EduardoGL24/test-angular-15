@@ -18,4 +18,15 @@ export class ApiService {
     return this.http.post(`http://201.131.20.125/BienesRaicesApi/api/services/app/Catalogo/EstadoCivil`, {});
   }
 
+  isAuthenticated(){
+    const userAuth = sessionStorage.getItem('isAuthenticated');
+    console.log(userAuth);
+    if(userAuth === 'true'){
+      return true
+    } else {
+      return false
+    }
+  }
+
+
 }
