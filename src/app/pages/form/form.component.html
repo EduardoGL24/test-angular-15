@@ -2,10 +2,10 @@
 <div class="page-container ps-4">
   <h2 class="page-title">Formulario reactivo</h2>
   <section class="form-container pt-5 pb-5 ps-5 pe-5">
-    <div class="alert alert-success mb-3" role="alert" *ngIf="formSuccess">
+    <div class="alert alert-success mb-4" role="alert" *ngIf="formSuccess">
       ¡Éxito! El formulario se ha enviado con éxito.
     </div>
-    <div class="alert alert-danger mb-3" role="alert" *ngIf="formError">
+    <div class="alert alert-danger mb-4" role="alert" *ngIf="formError">
       ¡Error! Algo salió mal. Por favor, inténtalo de nuevo.
     </div>    
     <form [formGroup]="personalInformationForm" (ngSubmit)="onSubmit()" class="row">
@@ -26,7 +26,7 @@
         <mat-label>Estado Civil</mat-label>
         <mat-select formControlName="estadoCivil">
           <mat-option selected [value]="null">Prefiero no responder</mat-option>
-          <mat-option *ngFor="let status of maritalStatuses" [value]="status.value">{{ status.label }}</mat-option>
+          <mat-option *ngFor="let status of maritalStatuses" [value]="status.value">{{ status.name }}</mat-option>
         </mat-select>
       </mat-form-field>
       

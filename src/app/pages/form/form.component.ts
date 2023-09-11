@@ -68,11 +68,19 @@ export class FormComponent implements OnInit {
   }
 
   getMaritalStatuses(){
+    this.loading = true;
     this.apiService.getList().subscribe(resp => {
+      this.loading = false;
 			console.log(resp)
       this.maritalStatuses = resp;
 		}, (error) => {
+      this.loading = false;
 			console.log(error);
+      this.maritalStatuses = [
+        { value: 12, name: 'Soltero' },
+        { value: 13, name: 'Casado' },
+        { value: 14, name: 'Divorciado' }
+      ]
 		})
   }
 
@@ -82,9 +90,10 @@ export class FormComponent implements OnInit {
       this.loading = false;
       if(this.personalInformationForm.valid){
         this.formSuccess = true;
+        this.personalInformationForm.reset();
         setTimeout(()=>{
           this.formSuccess = false;
-        }, 3000)
+        }, 5000)
       } else {
         this.formError = true;
       }
