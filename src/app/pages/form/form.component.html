@@ -1,6 +1,13 @@
+<div class="loading" *ngIf="loading">Loading&#8230;</div>
 <div class="page-container ps-4">
   <h2 class="page-title">Formulario reactivo</h2>
   <section class="form-container pt-5 pb-5 ps-5 pe-5">
+    <div class="alert alert-success mb-3" role="alert" *ngIf="formSuccess">
+      ¡Éxito! El formulario se ha enviado con éxito.
+    </div>
+    <div class="alert alert-danger mb-3" role="alert" *ngIf="formError">
+      ¡Error! Algo salió mal. Por favor, inténtalo de nuevo.
+    </div>    
     <form [formGroup]="personalInformationForm" (ngSubmit)="onSubmit()" class="row">
 
       <mat-form-field appearance="outline" class="mb-2">

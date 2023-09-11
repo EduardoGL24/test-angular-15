@@ -13,6 +13,9 @@ export class FormComponent implements OnInit {
   personalInformationForm!: FormGroup;
   booksReadLastMonths!: FormArray;
   maritalStatuses: any = [];
+  formSuccess: boolean = false;
+  formError: boolean = false;
+  loading: boolean = false;
 
   constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.setUpForm();
@@ -74,8 +77,18 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.personalInformationForm.value);
-    
+    this.loading = true;
+    setTimeout(()=>{
+      this.loading = false;
+      if(this.personalInformationForm.valid){
+        this.formSuccess = true;
+        setTimeout(()=>{
+          this.formSuccess = false;
+        }, 3000)
+      } else {
+        this.formError = true;
+      }
+    }, 2000)
   }
 
 }

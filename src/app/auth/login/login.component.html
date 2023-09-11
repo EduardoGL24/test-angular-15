@@ -1,10 +1,13 @@
+<div class="loading" *ngIf="loading">Loading&#8230;</div>
 <div class="main-container">
-  <section class="login-container ">
+  <section class="login-container "> 
     <form [formGroup]="loginForm">
       <div class="login-title-container pt-5 pb-4">
         <h1>Login</h1>
       </div>
-
+      <div class="alert alert-danger mb-3" role="alert" *ngIf="loginError">
+        ¡Error! Algo salió mal. Por favor, inténtalo de nuevo.
+      </div> 
       <div class="login-inputs-container w-100">
         <mat-form-field class="pt-4 pb-4" appearance="outline" class="w-75">
           <mat-label>Username</mat-label>
@@ -19,7 +22,7 @@
       </div>
 
       <div class="login-button-container pb-5">
-        <button class="w-75 color-bg-primary text-white" mat-flat-button (click)="login()">LOGIN</button>
+        <button class="w-75 color-bg-primary text-white" mat-flat-button (click)="login()" [disabled]="loading">LOGIN</button>
       </div>
     </form>
   </section>
