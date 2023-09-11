@@ -1,0 +1,20 @@
+.page-container{
+  background-image: radial-gradient(circle at 75% 26%, rgba(116, 116, 116,0.04) 0%, rgba(116, 116, 116,0.04) 50%,rgba(222, 222, 222,0.04) 50%, rgba(222, 222, 222,0.04) 100%),radial-gradient(circle at 62% 63%, rgba(60, 60, 60,0.04) 0%, rgba(60, 60, 60,0.04) 50%,rgba(152, 152, 152,0.04) 50%, rgba(152, 152, 152,0.04) 100%),radial-gradient(circle at 80% 64%, rgba(108, 108, 108,0.04) 0%, rgba(108, 108, 108,0.04) 50%,rgba(252, 252, 252,0.04) 50%, rgba(252, 252, 252,0.04) 100%),radial-gradient(circle at 97% 83%, rgba(184, 184, 184,0.04) 0%, rgba(184, 184, 184,0.04) 50%,rgba(137, 137, 137,0.04) 50%, rgba(137, 137, 137,0.04) 100%),radial-gradient(circle at 60% 7%, rgba(69, 69, 69,0.04) 0%, rgba(69, 69, 69,0.04) 50%,rgba(211, 211, 211,0.04) 50%, rgba(211, 211, 211,0.04) 100%),linear-gradient(90deg, rgb(148,187,233),rgb(238,174,202));
+  .form-container{
+    width: 45%;
+    background-color: #FFF;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .text-result-container{
+    margin: 0 auto;
+    width: 60%;
+    h4{
+      font-size: 30px;
+      color: #FFF;
+      border-bottom: 2px solid #FFF;
+      margin-bottom: 15px;
+      padding-bottom: 20px;
+    }
+  }
+}

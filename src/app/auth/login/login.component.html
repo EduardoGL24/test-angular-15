@@ -1,0 +1,29 @@
+<div class="loading" *ngIf="loading">Loading&#8230;</div>
+<div class="main-container">
+  <section class="login-container "> 
+    <form [formGroup]="loginForm">
+      <div class="login-title-container pt-5 pb-4">
+        <h1>Login</h1>
+      </div>
+      <div class="alert alert-danger mb-3" role="alert" *ngIf="loginError">
+        ¡Error! Algo salió mal. Por favor, inténtalo de nuevo.
+      </div> 
+      <div class="login-inputs-container w-100">
+        <mat-form-field class="pt-4 pb-4" appearance="outline" class="w-75">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" type="text" placeholder="Username" />
+          <mat-icon matPrefix class="m-2">person</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="mt-4 mb-4" appearance="outline" class="w-75">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Password" />
+          <mat-icon matPrefix class="m-2">lock</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="login-button-container pb-5">
+        <button class="w-75 color-bg-primary text-white" mat-flat-button (click)="login()" [disabled]="loading">LOGIN</button>
+      </div>
+    </form>
+  </section>
+</div>

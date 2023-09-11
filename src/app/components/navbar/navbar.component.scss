@@ -1,0 +1,12 @@
+nav{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  .navbar-nav{
+    font-weight: 500;
+    font-size: 17px;
+    .nav-item.active .nav-link {
+      color: #94bbe9;
+    }
+  } 
+}

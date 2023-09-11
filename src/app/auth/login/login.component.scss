@@ -1,0 +1,24 @@
+.main-container{
+  background: rgb(238,174,202);
+  background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+  width: 100%;
+  padding-top: 10%;
+  height: 100vh;
+  .login-container{
+    background-color: #FFF;
+    margin: 0 auto;
+    text-align: center;
+    width: 25%;
+    border-radius: 10px;
+    .login-title-container h1{
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .login-inputs-container mat-form-field{
+      margin-bottom: 20px;
+    }
+  }
+}

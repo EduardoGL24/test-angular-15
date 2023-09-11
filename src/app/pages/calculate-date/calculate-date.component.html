@@ -1,0 +1,34 @@
+<div class="page-container ps-4">
+  <h2 class="page-title mb-5">Calcular fecha</h2>
+  <section class="form-container pt-5 pb-5 ps-5 pe-5">
+    <form [formGroup]="dateForm" (ngSubmit)="calculateDate()" class="row">
+      <mat-form-field class="me-5" appearance="outline">
+        <mat-label>Seleccione una fecha:</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="selectedDate" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Seleccione la unidad:</mat-label>
+        <mat-select formControlName="selectedUnit">
+          <mat-option value="days">Días</mat-option>
+          <mat-option value="months">Meses</mat-option>
+          <mat-option value="years">Años</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <input matInput type="number" formControlName="amount" placeholder="Cantidad">
+      </mat-form-field>
+  
+      <div class="ps-2 pe-2">
+        <button mat-raised-button class="color-bg-primary text-white w-100" type="submit" [disabled]="dateForm.invalid">Calcular</button>
+      </div>
+    </form>
+  </section>
+
+  <section *ngIf="dateResult" class="text-result-container text-center pt-5">
+    <h4>El resultado fue {{ dateResult | date: 'dd MMM yyyy' }}</h4>
+  </section>
+</div>

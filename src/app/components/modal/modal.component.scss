@@ -1,0 +1,18 @@
+.modal-content-container{
+  h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+  }
+  .text-center mat-form-field{
+    width: 100% !important;
+  }
+  .buttons-container{
+    button{
+      width: 18%;
+    }
+    .cancel-button{
+      background-color: #94bbe9;
+    }
+  }
+}
